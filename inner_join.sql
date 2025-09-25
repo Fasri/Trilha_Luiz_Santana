@@ -1,0 +1,18 @@
+SELECT *
+FROM funcionario
+
+SELECT *
+FROM departamento
+
+SELECT 
+	f.MATRICULA,
+	f.NOME,
+	f.SALARIO,
+	d.CODIGO,
+	d.DESCRICAO AS "DEPARTAMENTO",
+	fu.DESCRICAO AS "FUNÇAO"
+FROM funcionario f
+	INNER JOIN departamento d
+	ON f.CODDEPTO = d.CODIGO
+	INNER JOIN funcao fu
+	ON f.CODFUNCAO = fu.CODIGO
