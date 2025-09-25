@@ -1,0 +1,15 @@
+SELECT
+	f.NOME,
+	d.DESCRICAO
+FROM funcionario f
+	LEFT JOIN departamento d
+	ON f.CODDEPTO = d.CODIGO
+WHERE d.CODIGO IS NULL
+
+SELECT
+	f.NOME,
+	d.DESCRICAO
+FROM funcionario f
+	RIGHT JOIN departamento d
+	ON f.CODDEPTO = d.CODIGO
+WHERE f.NOME IS NULL
